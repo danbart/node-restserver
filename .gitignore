@@ -2,3 +2,9 @@
 
 
 node_modules/
+# server/uploads/productos/*.jpg
+# server/uploads/usuarios/*
+# *.jpg
+# *.png
+# *.gif
+# *.jpeg

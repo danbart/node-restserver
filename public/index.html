@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,30 +9,36 @@
     <script src="https://apis.google.com/js/platform.js" async defer></script>
     <meta name="google-signin-client_id" content="992534703255-r98cdicomimgbfuvmpth4vr1dhq98dok.apps.googleusercontent.com">
 </head>
+
 <body>
 
+
+    <!-- img src="http://localhost:3000/imagen/productos/5c563fab6f6958357cf728c0-20.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvIjp7InJvbGUiOiJBRE1JTl9ST0xFIiwiZXN0YWRvIjp0cnVlLCJfaWQiOiI1YzU2M2U5ZTcxMmExZjA3YTAyZTM4NDgiLCJub21icmUiOiJ0ZXN0MSIsImVtYWlsIjoidGVzdDFAZ21haWwuY29tIiwiX192IjowfSwiaWF0IjoxNTQ5MzI5MzQ0LCJleHAiOjE1NDkzMzE5MzZ9.gJiPRD99QDdw4qc-p9Ilvp4bFe27By_zD_UUJ1kqQPE"
+        alt="" -->
+
     <div class="g-signin2" data-onsuccess="onSignIn"></div>
-    
+
     <a href="#" onclick="signOut();">Sign out</a>
     <script>
         function signOut() {
             var auth2 = gapi.auth2.getAuthInstance();
-            auth2.signOut().then(function () {
+            auth2.signOut().then(function() {
                 console.log('User signed out.');
             });
         }
     </script>
 
     <script>
-    function onSignIn(googleUser) {
-            var profile = googleUser.getBasicProfile();            
+        function onSignIn(googleUser) {
+            var profile = googleUser.getBasicProfile();
             var id_token = googleUser.getAuthResponse().id_token;
             var xhr = new XMLHttpRequest();
             xhr.open('POST', '/google');
             xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
             xhr.send('idtoken=' + id_token);
-            }
+        }
     </script>
 
 </body>
+
 </html>

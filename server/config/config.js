@@ -1,5 +1,3 @@
-
-
 // ======================
 // Puerto
 // ======================
@@ -33,12 +31,12 @@ process.env.SEED = process.env.SEED || "este-es-el-seed-desarrollo";
 // base de datos
 // ======================
 
-let urlDB;
+let urlDB; // jshint ignore:line
 
-if ( process.env.NODE_ENV === 'dev'){
+if (process.env.NODE_ENV === 'dev') {
     urlDB = 'mongodb://localhost:27017/cafe';
 } else {
-urlDB = process.env.MONGO_URI;
+    urlDB = process.env.MONGO_URI;
 }
 
 process.env.URLDB = urlDB;

@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 // jshint esversion: 6 
+=======
+>>>>>>> c19107a3bc6071542bc37738d0906eace83385d7
 const jwt = require('jsonwebtoken');
 // =====================
 // Verificar Token
@@ -40,6 +43,7 @@ let verificaAdmin_Role = (req, res, next) => {
                     err: { message: "Usuario no es Administrador" }
                 });
         }
+<<<<<<< HEAD
         next();
     });
 };
@@ -48,3 +52,32 @@ module.exports = {
     verificaToken,
     verificaAdmin_Role
 };
+=======
+        next();
+    });
+}
+
+// ============================
+// Verificar Token par aimagen
+// ============================
+let verificaTokenImg = (req, res, next) => {
+
+    let token = req.query.token;
+
+    jwt.verify(token, process.env.SEED, (err, decoded) => {
+        if (err) {
+            return res.status(401).json({ ok: false, err: { message: 'Token no Valido' } });
+        }
+
+        req.usuario = decoded.usuario;
+        next();
+    });
+
+}
+
+module.exports = {
+    verificaToken,
+    verificaAdmin_Role,
+    verificaTokenImg
+}
+>>>>>>> c19107a3bc6071542bc37738d0906eace83385d7

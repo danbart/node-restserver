@@ -1,0 +1,59 @@
+[33mcommit fe1365df16a3e01030d0c864014dd342f1d86c41[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;33mtag: v1.0.0[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;31mheroku/master[m[33m)[m
+Author: danbart <danilo_solorzano06@hotmail.com>
+Date:   Mon Feb 4 19:39:36 2019 -0600
+
+    subida de Archivos
+
+[33mcommit bef0b5934a7b40887ceea9e805045237d8228240[m
+Author: danbart <danilo_solorzano06@hotmail.com>
+Date:   Mon Feb 4 17:01:24 2019 -0600
+
+    Cargar imagen de producto y de Usuario
+
+[33mcommit 26517c64fd78f3e0e4c01349db243df40e6a99f3[m
+Author: danbart <danilo_solorzano06@hotmail.com>
+Date:   Sun Feb 3 22:25:24 2019 -0600
+
+    Upload
+
+[33mcommit fe5ad8ae4c35ab78ec845e11cb9196ae00f38b3f[m[33m ([m[1;33mtag: v0.1.2[m[33m)[m
+Author: danbart <danilo_solorzano06@hotmail.com>
+Date:   Fri Feb 1 17:00:23 2019 -0600
+
+    Productos y Categorias
+
+[33mcommit 297b4d7ba9bcf4abb905d81e8330a448d4d17f61[m[33m ([m[1;33mtag: v0.1.1[m[33m)[m
+Author: danbart <danilo_solorzano06@hotmail.com>
+Date:   Fri Jan 25 17:39:51 2019 -0600
+
+    Google Sing In
+
+[33mcommit 86ebe09a9558868551ed7c776d8983dae89bcd2c[m[33m ([m[1;33mtag: v0.1.0[m[33m)[m
+Author: danbart <danilo_solorzano06@hotmail.com>
+Date:   Fri Jan 25 15:21:23 2019 -0600
+
+    Login y token
+
+[33mcommit 67b694f392d309fed1eec8f0f640d46214ab5496[m[33m ([m[1;33mtag: v0.0.4[m[33m)[m
+Author: danbart <danilo_solorzano06@hotmail.com>
+Date:   Thu Jan 24 16:23:57 2019 -0600
+
+    Variable de entorno MONGO
+
+[33mcommit 895bf5852e47713588e29f066d6045952736cb6c[m
+Author: danbart <danilo_solorzano06@hotmail.com>
+Date:   Thu Jan 24 15:50:45 2019 -0600
+
+    RestServer - Usuario
+
+[33mcommit 241d93da0d7966aee8d8c2d1af0559763bbd411e[m
+Author: danbart <danilo_solorzano06@hotmail.com>
+Date:   Tue Jan 22 16:13:53 2019 -0600
+
+    npm start corregido
+
+[33mcommit 174408db9d616569405415b43fb3ddc1e45512fa[m[33m ([m[1;33mtag: v0.0.1[m[33m)[m
+Author: danbart <danilo_solorzano06@hotmail.com>
+Date:   Tue Jan 22 15:58:33 2019 -0600
+
+    Primer commit

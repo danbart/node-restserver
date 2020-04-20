@@ -1,0 +1,35 @@
+{
+    "folders": [
+		{
+			"path": "C:\\Users\\danil\\Documents\\node\\node-restserver"
+		},
+		{
+			"path": "C:\\Users\\danil\\Documents\\node\\08-socket-basico"
+		},
+		{
+			"path": "C:\\Users\\danil\\Documents\\node\\09-socket-colas"
+		},
+		{
+			"path": "C:\\Users\\danil\\Documents\\node\\10-socket-chat"
+		},
+		{
+			"path": "C:\\xampp\\htdocs\\storeonline"
+		},
+		{
+			"path": "C:\\xampp\\htdocs\\apitienda"
+		},
+		{
+			"path": "C:\\xampp\\htdocs\\slim1"
+		},
+		{
+			"path": "C:\\Users\\danil\\Documents\\node\\11-typescript-mysql"
+		},
+		{
+			"path": "C:\\Users\\danil\\Documents\\proyects\\sgc-portal"
+		},
+		{
+			"path": "C:\\Users\\danil\\Documents\\developers\\ingreso-egreso-app"
+		}
+	],
+    "settings": {}
+}

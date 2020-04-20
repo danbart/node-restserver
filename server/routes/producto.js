@@ -1,3 +1,4 @@
+/*jshint esversion: 6 */
 const express = require('express');
 
 const { verificaToken } = require('../middlewares/autenticacion');
@@ -39,7 +40,7 @@ app.get('/producto', verificaToken, (req, res) => {
                 ok: true,
                 productos
             });
-        })
+        });
 
 
 });
@@ -80,7 +81,7 @@ app.get('/producto/:id', verificaToken, (req, res) => {
                 ok: true,
                 producto
             });
-        })
+        });
 
 
 });
@@ -94,7 +95,7 @@ app.get('/producto/buscar/:termino', verificaToken, (req, res) => {
     let termino = req.params.termino;
 
     //Expresión regular la cual conside con minusculas y mayusculas por la i que se le envia
-    let regex = new RegExp(termino, 'i')
+    let regex = new RegExp(termino, 'i');
 
     Producto.find({ nombre: regex, disponible: true })
         .populate('categoria', 'descripcion')
@@ -112,10 +113,10 @@ app.get('/producto/buscar/:termino', verificaToken, (req, res) => {
             res.json({
                 ok: true,
                 productos
-            })
-        })
+            });
+        });
 
-})
+});
 
 // ===========================
 //  Crear Productos
@@ -146,8 +147,8 @@ app.post('/producto', verificaToken, (req, res) => {
         res.json({
             ok: true,
             producto: productoDB
-        })
-    })
+        });
+    });
 
 });
 
@@ -192,11 +193,11 @@ app.put('/producto/:id', verificaToken, (req, res) => {
             res.json({
                 ok: true,
                 producto: productoDB
-            })
-        })
+            });
+        });
 
 
-    })
+    });
 
 });
 
@@ -209,7 +210,7 @@ app.delete('/producto/:id', verificaToken, (req, res) => {
     let id = req.params.id;
     let cambiarEstado = {
         disponible: false
-    }
+    };
 
     Producto.findByIdAndUpdate(id, cambiarEstado, { new: true, runValidators: true }, (err, productoDB) => {
         if (err) {
@@ -232,10 +233,10 @@ app.delete('/producto/:id', verificaToken, (req, res) => {
         res.json({
             ok: true,
             message: "Producto borrado exitosamente"
-        })
-    })
+        });
+    });
 
 });
 
 
-module.exports = app
+module.exports = app;

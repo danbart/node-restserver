@@ -1,3 +1,4 @@
+/*jshint esversion: 6 */
 const express = require('express');
 
 const fileUpload = require('express-fileupload');
@@ -36,7 +37,7 @@ app.put('/uploads/:tipo/:id', function(req, res) {
             err: {
                 message: 'Las tipos permitidas son ' + tiposValidos.join(', ')
             }
-        })
+        });
     }
 
     // recive el archivo mediante nuestra variable archivo
@@ -54,11 +55,11 @@ app.put('/uploads/:tipo/:id', function(req, res) {
                 message: 'Las extensiones permitidas son ' + extensionesValidas.join(', '),
                 ext: extension
             }
-        })
+        });
     }
 
     // Cambiar nombre al archivo;
-    let nombreArchivo = `${id}-${ new Date().getMilliseconds() }.${extension}`
+    let nombreArchivo = `${id}-${ new Date().getMilliseconds() }.${extension}`;
 
     archivo.mv(`server/uploads/${tipo}/${nombreArchivo}`, (err) => {
         if (err) {
@@ -74,9 +75,9 @@ app.put('/uploads/:tipo/:id', function(req, res) {
         } else {
             imagenProducto(id, res, nombreArchivo);
         }
-    })
+    });
 
-})
+});
 
 function imagenUsuario(id, res, nombreArchivo) {
     Usuario.findById(id, (err, usuarioDB) => {
@@ -95,7 +96,7 @@ function imagenUsuario(id, res, nombreArchivo) {
                 err: {
                     message: 'Usuario no existe'
                 }
-            })
+            });
         }
 
         borrarArchivo(usuarioDB.img, 'usuarios');
@@ -118,9 +119,9 @@ function imagenUsuario(id, res, nombreArchivo) {
                 ok: true,
                 usuario: usuarioGuardado,
                 img: nombreArchivo
-            })
-        })
-    })
+            });
+        });
+    });
 }
 
 function imagenProducto(id, res, nombreArchivo) {
@@ -158,16 +159,16 @@ function imagenProducto(id, res, nombreArchivo) {
                 ok: true,
                 producto: productoGuardao,
                 img: nombreArchivo
-            })
-        })
+            });
+        });
 
-    })
+    });
 }
 
 function borrarArchivo(nombreImagen, tipo) {
     let pathImagen = path.resolve(__dirname, `../uploads/${tipo}/${nombreImagen}`);
     if (fs.existsSync(pathImagen)) {
-        fs.unlinkSync(pathImagen)
+        fs.unlinkSync(pathImagen);
     }
 
 }

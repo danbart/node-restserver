@@ -1,3 +1,4 @@
+/*jshint esversion: 6 */
 const express = require("express");
 
 //bcrypt encripta la contraseña
@@ -25,7 +26,7 @@ app.get("/usuario", verificaToken, (req, res) => {
                 return res.status(400).json({
                     ok: false,
                     err
-                })
+                });
             }
 
             Usuario.count({ estado: true }, (err, conteo) => {
@@ -33,9 +34,9 @@ app.get("/usuario", verificaToken, (req, res) => {
                     ok: true,
                     usuarios,
                     cuantos: conteo
-                })
+                });
 
-            })
+            });
 
         });
 

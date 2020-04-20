@@ -1,3 +1,4 @@
+// jshint esversion: 6 
 require('./config/config');
 
 const express = require('express');
@@ -8,10 +9,10 @@ const bodyParser = require("body-parser");
 const path = require('path');
 
 // parse application/x-www-form-urlencoded
-app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.urlencoded({ extended: false }));
 
 // parse application/json
-app.use(bodyParser.json())
+app.use(bodyParser.json());
 
 // habilitar la carpeta public
 app.use(express.static(path.resolve(__dirname, '../public')));
@@ -28,4 +29,4 @@ mongoose.connect(process.env.URLDB, { useNewUrlParser: true, useCreateIndex: tru
 
 app.listen(process.env.PORT, () => {
     console.log(`Escuchando el puerto ${process.env.PORT}`);
-})
+});

@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-// jshint esversion: 6 
-=======
->>>>>>> c19107a3bc6071542bc37738d0906eace83385d7
 const jwt = require('jsonwebtoken');
 // =====================
 // Verificar Token
@@ -43,16 +39,6 @@ let verificaAdmin_Role = (req, res, next) => {
                     err: { message: "Usuario no es Administrador" }
                 });
         }
-<<<<<<< HEAD
-        next();
-    });
-};
-
-module.exports = {
-    verificaToken,
-    verificaAdmin_Role
-};
-=======
         next();
     });
 }
@@ -80,4 +66,3 @@ module.exports = {
     verificaAdmin_Role,
     verificaTokenImg
 }
->>>>>>> c19107a3bc6071542bc37738d0906eace83385d7
